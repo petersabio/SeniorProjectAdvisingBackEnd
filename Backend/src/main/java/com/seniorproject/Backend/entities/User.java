@@ -1,11 +1,6 @@
 package com.seniorproject.Backend.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.*;
 
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
@@ -130,5 +125,21 @@ public class User {
     }
     public void setAdvisorID(int advisorID) {
         this.advisorID = advisorID;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", Password='" + Password + '\'' +
+                ", usertype=" + usertype +
+                ", credits=" + credits +
+                ", major='" + major + '\'' +
+                ", minor='" + minor + '\'' +
+                ", gpa=" + gpa +
+                ", advisorID=" + advisorID +
+                '}';
     }
 }
