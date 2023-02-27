@@ -19,7 +19,7 @@ import java.util.Scanner;
 @SpringBootApplication
 public class BackendApplication implements CommandLineRunner{
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	//private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private UserService userService;
 	public static void main(String[] args) {
@@ -30,8 +30,6 @@ public class BackendApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		//User users = userService.getUserById(2);
-		//users.toString();
 		System.out.println("test");
 		User testuser = new User(6,"dave","username","939842",0,40,"lunch","math",3,4);
 		userService.createUser(testuser);
@@ -39,6 +37,12 @@ public class BackendApplication implements CommandLineRunner{
 
 	private void createAccount(User user){
 		userService.createUser(user);
+	}
+
+	private void createAccount(int userID, String name, String username, String password, int usertype, int credits,String major, String minor, float gpa, int advidorID){
+		User newUser = new User(userID,name,username,password,usertype,credits, major,minor,gpa,advidorID);
+		userService.createUser(newUser);
+		System.out.println("New User Added");
 	}
 
 
