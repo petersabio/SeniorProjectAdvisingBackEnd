@@ -1,14 +1,14 @@
 package com.seniorproject.Backend.entities;
 
+import jakarta.persistence.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
-//@Entity
-@Table(name = "Message")
+@Entity
+@Table(name = "MessageTable")
 public class Message {
     @Id
     @Column(name = "messageID")

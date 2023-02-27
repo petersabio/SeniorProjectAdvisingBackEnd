@@ -1,20 +1,20 @@
 package com.seniorproject.Backend.entities;
 
+import jakarta.persistence.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
 
-//@Entity
-@Table(name = "Courses")
+@Entity
+@Table(name = "CoursesTable")
 public class Courses {
     @Id
     @Column(name = "coursecode")
     private String coursecode;
-    @Id
+    //@Id
     @Column(name = "section")
     private String section;
-    @Id
+    //@Id
     @Column(name = "offsemester")
     private String offsemester;
     @Column(name = "coursename")

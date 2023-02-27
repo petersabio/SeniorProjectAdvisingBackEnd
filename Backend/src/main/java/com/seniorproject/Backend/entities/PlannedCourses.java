@@ -3,15 +3,15 @@ package com.seniorproject.Backend.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
-//@Entity
-@Table(name = "PlannedCourses")
+@Entity
+@Table(name = "PlannedCoursesTable")
 public class PlannedCourses {
     @Id
     @Column(name = "userID")
     private int userID;
-    @Id
+    //@Id
     @Column(name = "coursecode")
     private String coursecode;
     @Column(name = "semester")

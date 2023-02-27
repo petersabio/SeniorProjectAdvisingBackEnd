@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
 @Entity
-@Table(name = "User")
+@Table(name = "UserTable")
 public class User {
     @Id
     @Column(name = "UserID")
