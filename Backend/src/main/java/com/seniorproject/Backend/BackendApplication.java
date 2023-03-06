@@ -2,19 +2,10 @@ package com.seniorproject.Backend;
 
 import com.seniorproject.Backend.entities.User;
 import com.seniorproject.Backend.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class BackendApplication implements CommandLineRunner{
@@ -29,8 +20,8 @@ public class BackendApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		//System.out.println("test");
-		User testuser = new User(20,"dave","username","939842",0,40,"lunch","math",3,4);
-		userService.createUser(testuser);
+		User testuser = new User(1,"dave","username","939842",0,40,"lunch","math",3,4);
+		createAccount(testuser);
 	}
 
 	private void createAccount(User user){

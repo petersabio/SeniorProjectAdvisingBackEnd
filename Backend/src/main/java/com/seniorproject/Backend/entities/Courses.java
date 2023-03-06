@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
+import java.sql.Time;
+
 @Entity
 @Table(name = "CoursesTable")
 public class Courses {
@@ -28,12 +30,12 @@ public class Courses {
     @Column(name = "days")
     private String days;
     @Column(name = "time")
-    private int time;
+    private Time time;
 
     public Courses() {
     }
 
-    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, String days, int time) {
+    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, String days, Time time) {
         this.coursecode = coursecode;
         this.section = section;
         this.offsemester = offsemester;
@@ -112,10 +114,10 @@ public class Courses {
     }
 
     //Time
-    public int getTime() {
+    public Time getTime() {
         return time;
     }
-    public void setTime(int time) {
+    public void setTime(Time time) {
         this.time = time;
     }
 }

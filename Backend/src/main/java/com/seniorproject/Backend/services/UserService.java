@@ -36,7 +36,8 @@ public class UserService implements UserServiceInterface{
             userUpdate.setAdvisorID(user.getAdvisorID());
             userRepository.save(userUpdate);
             return userUpdate;
-        }else{
+        }
+        else{
             throw new ResourceNotFoundException("Record not Found with id: " + user.getUserID());
         }
     }
