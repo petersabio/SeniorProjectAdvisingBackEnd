@@ -28,14 +28,14 @@ public class Courses {
     @Column(name = "prereq")
     private String prereq;
     @Column(name = "days")
-    private String days;
+    private int days;
     @Column(name = "time")
     private Time time;
 
     public Courses() {
     }
 
-    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, String days, Time time) {
+    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, int days, Time time) {
         this.coursecode = coursecode;
         this.section = section;
         this.offsemester = offsemester;
@@ -106,10 +106,10 @@ public class Courses {
     }
 
     //Days
-    public String getDays() {
+    public int getDays() {
         return days;
     }
-    public void setDays(String days) {
+    public void setDays(int days) {
         this.days = days;
     }
 
