@@ -120,4 +120,20 @@ public class Courses {
     public void setTime(Time time) {
         this.time = time;
     }
+
+    //to string
+    @Override
+    public String toString() {
+        return "Courses{" +
+                "coursecode='" + coursecode + '\'' +
+                ", section='" + section + '\'' +
+                ", offsemester='" + offsemester + '\'' +
+                ", coursename='" + coursename + '\'' +
+                ", professor='" + professor + '\'' +
+                ", description='" + description + '\'' +
+                ", prereq='" + prereq + '\'' +
+                ", days=" + days +
+                ", time=" + time +
+                '}';
+    }
 }
