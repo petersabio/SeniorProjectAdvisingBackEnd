@@ -17,7 +17,7 @@ public class CourseController {
     @Autowired
     private CoursesRepository coursesRepository;
 
-    @GetMapping("courses")
+    @GetMapping("courses") //sets url mapping for course data
     public List<Courses> getCourses(){
         return this.coursesRepository.findAll();
     }
