@@ -5,10 +5,12 @@ import com.seniorproject.Backend.exceptions.ResourceNotFoundException;
 import com.seniorproject.Backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @Service
 public class UserService implements UserServiceInterface{
     @Autowired
