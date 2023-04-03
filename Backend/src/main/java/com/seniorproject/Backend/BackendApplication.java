@@ -52,29 +52,4 @@ public class BackendApplication implements CommandLineRunner{
 	}
 
 
-//	public void run(String... args) throws Exception
-//	{
-//		List<User> userlist = userService.getAllUsers();
-//		System.out.println(userlist);
-//		System.out.println("This works");
-//	}
-
-
-
-//	private void test(){
-//
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.println("get users?");
-//		String answer = scanner.nextLine();
-//		if (answer == "y"){
-//			List<User> userlist = userService.getAllUsers();
-//			if (userlist.isEmpty()){
-//				System.out.println("Empty");
-//			}else {
-//				System.out.println(Arrays.toString(userlist.toArray()));
-//				System.out.println("This works");
-//			}
-//		}
-//	}
-
 }

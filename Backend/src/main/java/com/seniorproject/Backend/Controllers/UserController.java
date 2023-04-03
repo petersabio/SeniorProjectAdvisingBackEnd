@@ -21,12 +21,16 @@ public class UserController {
         System.out.println(userData);
         User user =userRepository.findByusername(userData.getUsername());
         if(user.getPassword().equals(userData.getPassword()))
+        {
             return ResponseEntity.ok(user);
-
+        }
         return (ResponseEntity<?>) ResponseEntity.internalServerError();
     }
 
-
+    @PostMapping("createUser")
+    public ResponseEntity<User> createUser(@RequestBody User user){
+        return ResponseEntity.ok(userRepository.save(user));
+    }
 
     @GetMapping("Users")
     public List<User> getUsers() {return this.userRepository.findAll();}
