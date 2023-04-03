@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
+import java.sql.Time;
+
 @Entity
 @Table(name = "CoursesTable")
 public class Courses {
@@ -26,14 +28,14 @@ public class Courses {
     @Column(name = "prereq")
     private String prereq;
     @Column(name = "days")
-    private String days;
+    private int days;
     @Column(name = "time")
-    private int time;
+    private Time time;
 
     public Courses() {
     }
 
-    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, String days, int time) {
+    public Courses(String coursecode, String section, String offsemester, String coursename, String porfessor, String description, String prereq, int days, Time time) {
         this.coursecode = coursecode;
         this.section = section;
         this.offsemester = offsemester;
@@ -104,18 +106,34 @@ public class Courses {
     }
 
     //Days
-    public String getDays() {
+    public int getDays() {
         return days;
     }
-    public void setDays(String days) {
+    public void setDays(int days) {
         this.days = days;
     }
 
     //Time
-    public int getTime() {
+    public Time getTime() {
         return time;
     }
-    public void setTime(int time) {
+    public void setTime(Time time) {
         this.time = time;
+    }
+
+    //to string
+    @Override
+    public String toString() {
+        return "Courses{" +
+                "coursecode='" + coursecode + '\'' +
+                ", section='" + section + '\'' +
+                ", offsemester='" + offsemester + '\'' +
+                ", coursename='" + coursename + '\'' +
+                ", professor='" + professor + '\'' +
+                ", description='" + description + '\'' +
+                ", prereq='" + prereq + '\'' +
+                ", days=" + days +
+                ", time=" + time +
+                '}';
     }
 }
