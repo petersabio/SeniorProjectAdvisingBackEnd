@@ -16,6 +16,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    //Checks login credentials
     @PostMapping("login")
     public ResponseEntity<?> loginUser(@RequestBody User userData){
         System.out.println(userData);
@@ -27,11 +28,12 @@ public class UserController {
         return (ResponseEntity<?>) ResponseEntity.internalServerError();
     }
 
+    //adds users to DB
     @PostMapping("createUser")
     public ResponseEntity<User> createUser(@RequestBody User user){
         return ResponseEntity.ok(userRepository.save(user));
     }
-
+    //returns list of all users
     @GetMapping("Users")
     public List<User> getUsers() {return this.userRepository.findAll();}
 
